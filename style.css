@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: "poppins";
+}
+
+.main-container{
+    height: auto;
+    width: 100vw;
+}
+
+.img-cont{
+    background-image: url("https://blog.teamup.com/wp-content/uploads/2021/12/todo-header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -180px;
+    height: 45vh;
+    width: 100%;
+}
+
+.bottom-cont{
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190827/pngtree-wooden-plank-texture-wall-background-image_306975.jpg");
+}
+
+.bc1{
+    display: flex;
+    justify-content: center;
+    height: 45vh;
+    width: 48%;
+    background-color: #06044d;
+    background-image: url("https://cdn.wildrocket.io/media/JWKzdonTttBD2UGQ0R28nLSLX4I0pYdADrV1FnU6.png");
+    color: rgb(26, 11, 241);
+}
+
+.bc2{
+    height: 45vh;
+    width: 48%;
+    background-color: #06044d;
+    background-image: url("https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg");
+}
+
+.form-container{
+    width: 100%;
+    text-align: center;
+}
+
+.task-input{
+    height: 50px;
+    width: 80%;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    outline: none;
+    background-color: transparent;
+    border-width: 0px;
+    border-bottom: 2px solid #f22e2e;
+    color: rgb(7, 7, 7);
+    font-size: 17px;
+}
+
+.task-input::-webkit-input-placeholder{
+    color: white;
+}
+
+.form-head{
+    margin-bottom: 50px;
+}
+
+.form-head span{
+    color: #fc0808;
+    font-size: 45px;
+}
+
+.form-head span{
+    position: relative;
+}
+
+.form-head span::after{
+    content: "";
+    position: absolute;
+    top: 92%;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    transform: skew(50deg);
+}
+
+.submit-btn{
+    height: 45px;
+    width: 200px;
+    background-color: #10f05a;
+    color: rgb(20, 20, 20);
+    border-width: 0px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.task-container h1{
+    color: #0d09f3;
+    text-align: center;
+}
+
+.task-container h1 span{
+    position: relative;
+}
+
+.task-container h1 span::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    height: 4px;
+    width: 100%;
+    transform: skew(50deg);
+    background-color: rgb(231, 135, 8);
+}
+
+.task-list{
+    overflow-y: auto;
+    height: 300px;
+    width: 95%;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.task-list::-webkit-scrollbar{
+    width: 4px;
+    background-color: rgb(9, 235, 103);
+}
+
+.task-list::-webkit-scrollbar-thumb{
+    width: 4px;
+    background-color: #aa5007;
+}
+
+.task-card{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(14, 13, 13);
+    margin-top: 10px;
+}
+
+.tc1{
+    width: 70%;
+    display: flex;
+}
+
+.tc2{
+    width: 30%;
+    display: flex;
+    justify-content: end;
+}
+
+.task-card input{
+    height: 28px;
+    width: 28px;
+    position: relative;
+    top: 10px;
+    margin-left: 30px;
+}
+
+.task-card label{
+    display: block;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    top: 6px;
+    width: 270px;
+    overflow-y: scroll;
+    height: 50px;
+    text-align: start;
+}
+
+.task-card label::-webkit-scrollbar{
+    display: none;
+}
+
+.task-card button{
+    height: 40px;
+    width: 40px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.task-card button i{
+    font-size: 20px;
+    color:#0c0c0c;
+}
+
+.task-img-cont img{
+    height: 250px;
+    width: 50%;
+}
+
+@media  screen and (max-width: 1100px) {
+    .bottom-cont{
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .bc1,.bc2{
+        padding: 50px 30px;
+        width: 80%;
+        margin-top: 50px;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .task-img-cont img{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .task-card{
+        flex-direction: column;
+    }
+    .task-card label{
+        width: 100%;
+    }
+    .tc1,.tc2{
+        width: 100%;
+    }
+    .task-img-cont img{
+        width: 80%;
+    }
+    .bc1,.bc2{
+        width: 95%;
+    }
+    .img-cont{
+        background-position: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .bottom-cont{
+        margin-top: 0px;
+    }
+    .bc1,.bc2{
+        width: 98%;
+        padding: 30px 0px;
+    }
+    .task-img-cont img{
+        width: 100%;
+    }
+    .form-head span{
+        font-size: 30px;
+    }
+    .img-cont{
+        background-position: -50px 0px;
+    }
+}
